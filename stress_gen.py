@@ -37,6 +37,6 @@ while idx < len(scenario):
         job = job_generator.generate_job()
         batch_api.create_namespaced_job(namespace="default", body=job)
         print("Created a job: " + job.metadata.name)
-        idx += 1
 
     time.sleep(5)
+    idx += 1

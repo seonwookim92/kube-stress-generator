@@ -4,7 +4,7 @@
 STRESS_LEVEL_MAX = 5 # Maximum stress level
 STRESS_DURATION_MAX = 5 # minutes
 STRESS_TYPE = ["cpu", "vm"] # Stress types to generate
-NUM_JOBS = 50 # Number of jobs to generate
+NUM_JOBS = 100 # Number of jobs to generate
 RUN_TIME = 10 # minutes
 
 

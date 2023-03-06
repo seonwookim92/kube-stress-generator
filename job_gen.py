@@ -45,7 +45,7 @@ class JobGenerator:
                         scheduler_name="kube-custom-scheduler",
                     )
                 ),
-                active_deadline_seconds=self.duration*60,
+                # active_deadline_seconds=self.duration*60,
             )
         )
         return job
