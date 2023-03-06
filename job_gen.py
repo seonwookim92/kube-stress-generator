@@ -31,7 +31,6 @@ class JobGenerator:
             spec=client.V1JobSpec(
                 template=client.V1PodTemplateSpec(
                     spec=client.V1PodSpec(
-                        schedulerName="kube-custom-scheduler",
                         containers=[
                             client.V1Container(
                                 name=self.job_name,
@@ -43,6 +42,7 @@ class JobGenerator:
                             )
                         ],
                         restart_policy="Never",
+                        scheduler_name="kube-custom-scheduler",
                     )
                 ),
                 active_deadline_seconds=self.duration*60,
