@@ -31,6 +31,7 @@ class JobGenerator:
             spec=client.V1JobSpec(
                 template=client.V1PodTemplateSpec(
                     spec=client.V1PodSpec(
+                        schedulerName="kube-custom-scheduler"
                         containers=[
                             client.V1Container(
                                 name=self.job_name,
