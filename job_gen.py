@@ -12,7 +12,7 @@ class JobGenerator:
             self.cpu_limit = f"{self.stress_level}000m"
             self.mem_limit = f"1Gi"
         elif self.stress_type == "vm":
-            self.cpu_limit = f"1000m"
+            self.cpu_limit = f"{max(1500, self.stress_level / 3)}m"
             self.mem_limit = f"{self.stress_level}Gi"
             self.mem_limit_stressng = f"{self.stress_level}G"
 
